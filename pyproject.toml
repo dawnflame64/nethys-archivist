@@ -1,0 +1,12 @@
+[project]
+name = "nethys-archivist"
+version = "0.1.0"
+description = "Scrapes images from the Archives of Nethys"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "aiofiles>=25.1.0",
+    "beautifulsoup4>=4.15.0",
+    "httpx>=0.28.1",
+    "rich>=15.0.0",
+]
