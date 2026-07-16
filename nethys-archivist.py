@@ -78,9 +78,9 @@ async def download_multiple_categories(categories: list[str], overwrite_if_exist
     with Progress(*Progress.get_default_columns(), MofNCompleteColumn()) as progress:
         downloads = []
         for category in categories:
-            task_scan = progress.add_task(f"[yellow][{category}] Scanning entries...", total=None)
-            task_scrape = progress.add_task(f"[light_green][{category}] Scraping image links...", visible=False, total=0)
-            task_download = progress.add_task(f"[cyan][{category}] Downloading images...", visible=False, total=0)
+            task_scan = progress.add_task(f"[magenta][{category}] Scanning entries...", total=None)
+            task_scrape = progress.add_task(f"[yellow][{category}] Scraping image links...", visible=False, total=0)
+            task_download = progress.add_task(f"[light_green][{category}] Downloading images...", visible=False, total=0)
             downloads.append(download_category(
                 category,
                 overwrite_if_exists=overwrite_if_exists,
