@@ -6,6 +6,13 @@ This made me sad because I love looking at the art for monsters and ancestries a
 so I made this program to scrape it before it all gets removed.
 I can't distribute the scraped art, of course, but I can share this code.
 
+**Please don't misuse this!**
+It follows good practices for scraping (limiting concurrent connections, exponential backoff on retries),
+but it does by necessity make a lot of requests to AoN.
+If too many people use it simultaneously or repeatedly, it could seriously tax the servers.
+I don't think anyone in the Pathfinder community wants that.
+If you want to use it, please only run it once to create a personal archive for yourself.
+
 ## Usage
 
 Have [`uv`](https://docs.astral.sh/uv/) installed, clone this repository, then run:
