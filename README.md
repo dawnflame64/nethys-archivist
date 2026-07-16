@@ -12,6 +12,7 @@ but it does by necessity make a lot of requests to AoN.
 If too many people use it simultaneously or repeatedly, it could seriously tax the servers.
 I don't think anyone in the Pathfinder community wants that.
 If you want to use it, please only run it once to create a personal archive for yourself.
+Don't share your archive with anyone, the art is Paizo's intellectual property.
 
 ## Usage
 
