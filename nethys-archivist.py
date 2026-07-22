@@ -6,8 +6,8 @@ import os
 from argparse import ArgumentParser
 from functools import partial
 
-from bs4 import BeautifulSoup
 from httpx import AsyncClient, HTTPStatusError, Limits, Response, ReadTimeout
+from bs4 import BeautifulSoup
 import aiofiles
 from rich.progress import Progress, MofNCompleteColumn
 
@@ -122,12 +122,7 @@ async def download_multiple_categories(categories: list[str], overwrite_if_exist
             else:
                 scrape_text = "Scraping image URLs..."
 
-            if has_images:
-                scrape_color = "yellow"
-            else:
-                scrape_color = "light_green"
-
-            task_scrape = progress.add_task(f"[{scrape_color}][{category}]{extra_spaces} {scrape_text}", visible=False, total=0)
+            task_scrape = progress.add_task(f"[yellow][{category}]{extra_spaces} {scrape_text}", visible=False, total=0)
 
             desc_when_complete = f"[light_green][{category}]{extra_spaces} Finished!"
 
