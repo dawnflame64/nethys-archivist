@@ -9,7 +9,6 @@ from functools import partial
 from bs4 import BeautifulSoup
 from httpx import AsyncClient, HTTPStatusError, Limits, Response, ReadTimeout
 import aiofiles
-from aiofiles.ospath import exists as async_path_exists
 from rich.progress import Progress, MofNCompleteColumn
 
 BASE_URL = "https://2e.aonprd.com/"
@@ -160,7 +159,7 @@ async def download_thumbnails_in_range(
 async def download_image(url: str, path: Path | str, overwrite_if_exists: bool = False, tick_progress: Callable | None = None):
     path = Path(path)
 
-    if await async_path_exists(path):
+    if await os.path.exists(path):
         if overwrite_if_exists:
             logging.info(f"Overwriting existing file at {path}")
         else:
