@@ -6,6 +6,8 @@ This made me sad because I love looking at the art for monsters and ancestries a
 so I made this program to scrape it before it all gets removed.
 I can't distribute the scraped art, of course, but I can share this code.
 
+Update 7/22: It also saves the entries themselves now, to preserve flavor text on monsters etc.
+
 **Please don't misuse this!**
 It follows good practices for scraping (limiting concurrent connections, exponential backoff on retries),
 but it does by necessity make a lot of requests to AoN.
@@ -31,9 +33,13 @@ Alternatively, if you don't want to use uv, just make sure your Python 3.14 envi
 
 Then run `python nethys-archivist.py`.
 
-The art will be placed in `download/` organized by category.
-Most of them have self-explanatory names,
+The art will be in `download/Images` organized by category.
+The art has self-explanatory names,
 so you can probably just search by filename to find what you're looking for.
+
+The downloaded entries will by named by their ID,
+so you might need to find the matching ID on Nethys to get the right page,
+or you can use some kind of grep-like tool.
 
 ## Note
 
